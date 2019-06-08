@@ -1,0 +1,17 @@
+opam-version: "2.0"
+name: "compiler-example"
+authors: "Author Name"
+homepage: "https://github.com/seanyeh/compiler-example"
+maintainer: "EMAIL@example.com"
+dev-repo: "git+ssh://git@github.com:seanyeh/compiler-example.git"
+bug-reports: "https://github.com/seanyeh/compiler-example/issues"
+synopsis: "Example compiler starter project"
+version: "0.1"
+build: [
+  [ "dune" "subst" ] {pinned}
+  [ "dune" "build" "-p" name "-j" jobs ]
+]
+depends: [
+  "dune"
+  "menhir"
+]
